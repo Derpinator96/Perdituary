@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(book2.jpg);
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    font-size: 40px;
+    justify-content: space-around;
+}
+
+
