@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(Untitled\ design\ \(3\).png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: 'Algeria', sans-serif;                             
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    justify-content: space-around;
+    
+}
+
+.button:hover::after, .button:hover::before{
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), transparent, yellow);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 3px;
+    animation: 3s spin linear infinite;
+    transition: ease 0.5s;
+}
+
+.button:hover::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+    transition: ease 0.5s;
+}
+
+/* .kala{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
+} */
+
+.button{
+    font-size: 110px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #9f4848;
+    text-shadow: 2px 2px 2px #000;
+    position: relative;
+}
+
+.button:hover{
+    font-size: 125px;
+    transition: ease 0.5s;
+    text-decoration: underline;
+    background-color: #9f4848;
+    color: yellow;
+}
+
+
+
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+
+    to{
+        --angle: 360deg;
+    }
+}
+
+
+
+
+
